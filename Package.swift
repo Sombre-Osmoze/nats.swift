@@ -16,7 +16,8 @@ let package = Package(
     dependencies: [
         .package(url: "https://github.com/apple/swift-nio.git", from: "2.0.0"),
         .package(url: "https://github.com/apple/swift-log.git", from: "1.4.2"),
-        .package(url: "https://github.com/nats-io/nkeys.swift.git", from: "0.1.2"),
+        // Use nkeys.swift fork with Swift Crypto (no libsodium) for static linking
+        .package(url: "https://github.com/Sombre-Osmoze/nkeys.swift.git", branch: "swift-crypto-migration"),
         .package(url: "https://github.com/apple/swift-nio-ssl.git", from: "2.0.0"),
         .package(url: "https://github.com/Jarema/swift-nuid.git", from: "0.2.0"),
     ],
